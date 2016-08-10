@@ -10,12 +10,12 @@
                 <nav class="header-main-menu">
                     <ul>
                         <li>Информация</li>
-                        <li class="header-menu-photo">Фото и видео</li>
-                        <li class="header-menu-logo"><img src="http://placehold.it/100x20"></li>
+                        <li class="header-menu-photo">Фото и видео</li>                        
                         <li>Карта штата</li>
                         <li>Гостиницы</li>
                     </ul>                                          
                 </nav>
+                <img src="http://placehold.it/100x20">
             </div>
         </header>
 
@@ -95,23 +95,23 @@
                 </div>
             </section>
 
-            <section class="date">
+            <section class="date-tour">
                 <h2 class="date-question">Заинтересовались?</h2>
                 <p>Укажите предполагаемые даты поездки,<br>
                 и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-                <form action="https://echo.htmlacademy.ru" method="post">
-                    <p>Поиск гостиницы в Седоне</p>
-                    <label>Дата заезда:</label>
-                    <input type="date" name="date-in" class="date"><br>
-                    <label>Дата выезда:</label>
-                    <input type="date" name="date-out" class="date"><br>
-                    <label>Взрослые:</label>
+                <button type="button" class="button-hotels">Поиск гостиницы в Седоне</button>>
+                <form action="https://echo.htmlacademy.ru" method="post">                    
+                    <label for="date-in">Дата заезда:</label>
+                    <input type="date" name="date-in" id="date-in" class="date"><br>
+                    <label for="date-out">Дата выезда:</label>
+                    <input type="date" name="date-out" id="date-out" class="date"><br>
+                    <label for="amount-adults">Взрослые:</label>
                     <button type="button" class="button">-</button>
-                    <input type="text" name="amount-adults">
+                    <input type="text" name="amount-adults" id="amount-adults">
                     <button type="button" class="button">+</button>
-                    <label>Дети:</label>
+                    <label for="amount-children">Дети:</label>
                     <button type="button" class="button">-</button>
-                    <input type="text" name="amount-children">
+                    <input type="text" name="amount-children" id="amount-children">
                     <button type="button" class="button">+</button><br>
                     <button type="submit" class="button-search">Найти</button>
                 </form> 
