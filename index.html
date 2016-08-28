@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Седона - небольшой городок в Аризоне</title>
-        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
         <header class="page-header">
@@ -16,7 +16,7 @@
                         <li>Гостиницы</li>
                     </ul>                                          
                 </nav>
-                <img src="img/header-logo.png" width="138" height="70">
+                <img src="img/header-logo.png" width="138" height="70" class="header-logo">
             </div>
         </header>
 
@@ -24,9 +24,11 @@
         <main class="container">
             <div class="main-background">
             </div>
-            <b>Седона - небольшой городок в Аризоне,<br>
-            заслуживающий большего!</b>
-            <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p> 
+            <div class="intro">
+                <b>Седона - небольшой городок в Аризоне,<br>
+                заслуживающий большего!</b>
+                <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+            </div> 
 
             <section>
                 <div class="reasons reasons-style1">
@@ -36,9 +38,9 @@
                     <p>Седона - не аттракцион для туристов,<br>
                     Там течет своя жизнь</p>                	
                 </div>                    
-                <div>
-                    <img src="img/index-main-img1.jpg" width="800" height="256">                	
-                </div>                
+                
+                    <img src="img/index-main-img1.jpg" width="800" height="256" class="index-img">                	
+                               
             </section>
 
             <section>
@@ -57,19 +59,19 @@
                     <p>Не только китайского, но и местного<br>
                     производства!</p>                	
                 </div>
-
             </section>
 
             <section>
-                <div>
-                	<img src="img/index-main-img2.jpg" width="800" height="256">
-                </div>
-                <div class="reasons reasons-style1">
+                
+                	<img src="img/index-main-img2.jpg" width="800" height="256" class="index-img">
+                
+                <div class="reasons reasons-style1 devils-bridge">
                     <h3>Там есть<br>
                     мост дьявола</h3>
                     <span class="number-reason">№2</span><br>
                     <p>Да, по нему можно пройти! Если конечно<br>
-                    вы осмелитесь</p>                                     
+                    вы осмелитесь</p> 
+                </div>                                    
             </section>
 
             <section>
@@ -101,33 +103,43 @@
                 <p>Укажите предполагаемые даты поездки,<br>
                 и мы покажем вам лучшие предложения гостиниц в Седоне</p>
                 <button type="button" class="button-hotels">Поиск гостиницы в Седоне</button>
-                <form action="https://echo.htmlacademy.ru" method="post">                    
-                    <label for="date-in">Дата заезда:</label>
-                    <input type="date" name="date-in" id="date-in" class="date"><br>
-                    <label for="date-out">Дата выезда:</label>
-                    <input type="date" name="date-out" id="date-out" class="date"><br>
-                    <label for="amount-adults">Взрослые:</label>
-                    <button type="button" class="button">-</button>
-                    <input type="text" name="amount-adults" id="amount-adults">
-                    <button type="button" class="button">+</button>
-                    <label for="amount-children">Дети:</label>
-                    <button type="button" class="button">-</button>
-                    <input type="text" name="amount-children" id="amount-children">
-                    <button type="button" class="button">+</button><br>
+                <form action="https://echo.htmlacademy.ru" method="post" class="form-index">                    
+                    <div class="date-form1 date-in">
+                        <label for="date-in">Дата заезда:</label>
+                        <input type="date" name="date-in" id="date-in" class="date">
+                    </div><br>
+                    <div class="date-form1 date-out">
+                        <label for="date-out">Дата выезда:</label>
+                        <input type="date" name="date-out" id="date-out" class="date">
+                    </div><br>
+                    <div class="date-form2">
+                        <label for="amount-adults" class="adults-children adults">Взрослые:</label>
+                        <div class="container-form-box1">
+                            <button type="button" class="button">-</button>                    
+                            <input type="text" name="amount-adults" id="amount-adults" class="amount">
+                            <button type="button" class="button">+</button>
+                        </div>            
+                        <label for="amount-children" class="adults-children children">Дети:</label>
+                        <div class="container-form-box2">                
+                            <button type="button" class="button">-</button>
+                            <input type="text" name="amount-children" id="amount-children" class="amount">
+                            <button type="button" class="button">+</button><br>
+                        </div>
+                    </div>
                     <button type="submit" class="button-search">Найти</button>
                 </form> 
             </section>        	
         </main>
 
 
-        <footer class="page-footer">
+        <footer class="footer-index">
             <div class="container">
                 <div class="footer-map"></div>
                 <section class="footer-tag">#Visitsedona</section>
                 <section class="footer-social">
-                    <a class="social-btn social-btn-tw" href="#">Twitter</a>
-                    <a class="social-btn social-btn-fb" href="#">Facebook</a>
-                    <a class="social-btn social-btn-ytb" href="#">Youtube</a>                	
+                    <a class="social-btn social-btn-tw" href="#">Tw</a>
+                    <a class="social-btn social-btn-fb" href="#">Fb</a>
+                    <a class="social-btn social-btn-ytb" href="#">Ytb</a>                	
                 </section>
                 <section class="footer-copyright">
                 	<span>Website by</span>
