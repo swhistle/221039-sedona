@@ -3,7 +3,7 @@
 html,
 body {
   min-width: 1200px;
-  min-height: 900px;
+  min-height: 850px;
   margin: 0;
   padding: 0;
 }
@@ -51,19 +51,16 @@ h3 {
 	width: 1200px;
 	margin: 0 auto;	
 	padding: 0;	
-
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
-.header-main-menu {
-	position: relative;	
+.header-main-menu {	
 	min-height: 56px;
 	width: 100%;
 	margin: 0;
 	background-color: #ffffff;
 	font-weight: bold;		
 	color: #000000;
-	
-
 }
 
 .header-main-menu ul {
@@ -103,13 +100,26 @@ h3 {
 	color: #cacaca;	
 }
 
-.header-menu-photo {		
+.header-menu-photo {
+	position: relative;		
 }
 
 .header-logo {
 	position: absolute;
 	top: 0;
-	left: 563px;
+	left: 44%;
+}
+
+.header-li-active {
+	color: #766357;
+}
+
+.header-li-active:hover {
+	color: #604e43;
+}
+
+.header-li-active:active {
+	opacity: 0.3;
 }
 
 /*ОБЩИЕ СТИЛИ ДЛЯ "ПОДВАЛА"*/
@@ -118,20 +128,29 @@ h3 {
 	width: 1200px;
 	min-height: 120px;
 	margin: 0 auto;
-	background-color: #ffffff;	
+	background-color: #ffffff;
+	position: relative;	
+    z-index: 9;	
 }
 
 .footer-index {
 
-    opacity: ;	
-	
+}
+
+.footer-page .container {
+	box-shadow: none;
+}
+
+footer.footer-page {
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 .footer-map {
+	position: relative;
 	width: 100%;
 	height: 475px;			
-	/*background: url("../img/index-footer-map.jpg") no-repeat 50% 0;*/
-	
+	background: url("../img/index-footer-map.jpg") no-repeat 50% 0;
+	z-index: 5;	
 }
 
 .footer-tag,
@@ -165,19 +184,32 @@ h3 {
 	background-color: #81b3d2;
 	background: #81b3d2 url("../img/icon-social.png") no-repeat;
 	background-size: 150px 20px;
+	position: relative;
+	z-index: 10;
+}
 
+.social-btn::after {
+	content: "";
+	position: relative;
+	top: 8px;
+	left: 8px;
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: none;
+	z-index: 5;
 }
 
 .social-btn-tw {
-	background-position: 1px 15px;	
+	background-position: 1px 13px;	
 }
 
 .social-btn-fb {
-	background-position: -55px 15px;	
+	background-position: -57px 13px;	
 }
 
 .social-btn-ytb {
-	background-position: -113px 15px;
+	background-position: -115px 13px;
 }
 
 .social-btn-tw:hover,
@@ -190,7 +222,13 @@ h3 {
 .social-btn-fb:active,
 .social-btn-ytb:active {
 	background-color: #5496bd;
-	/*добавить прозрачность иконкам*/
+}
+
+.social-btn-tw:active::after,
+.social-btn-fb:active::after,
+.social-btn-ytb:active::after {
+	background: #5496bd;
+	opacity: 0.3;	
 }
 
 .footer-copyright {
@@ -202,7 +240,27 @@ h3 {
 
 .footer-copyright img {
 	vertical-align: middle;
-	padding-left: 5px;
+	padding-left: 4px;	
+}
+
+.footer-html-academy {
+	display: inline-block;
+	vertical-align: middle;
+	width: 120px;
+	height: 40px;
+	background: url("../img/footer-logo-HA.png") no-repeat;
+	background-position: 50% 50%;
+}
+
+.footer-html-academy:hover {
+	background: url("../img/footer-logo-HA-hover.png") no-repeat;
+	background-position: 50% 50%;
+}
+
+.footer-copyright a:active {
+	background: url("../img/footer-logo-HA.png") no-repeat;
+	background-position: 50% 50%;
+	opacity: 0.3;
 }
 
 
@@ -210,21 +268,19 @@ h3 {
 
 .main-background {
 	width: 100%;
-	height: 510px;
-	background: url("../img/index-main-background.jpg") no-repeat 50% -54px;
+	height: 508px;
+	background: url("../img/index-main-background.jpg") no-repeat 50% -56px;
 	background-size: 1200px auto;
 }
 
 .intro {
 	width: 1200px;
-	min-height: 212px;
+	min-height: 216px;
 	padding-left: auto;
 	padding-right: auto;
-	padding-top: 1px;
-	
+	padding-top: 3px;	
 	background: #ffffff;
-	box-sizing: border-box;	
-
+	box-sizing: border-box;
 }
 
 .intro b {
@@ -262,7 +318,6 @@ section div {
 }
 
 section h3 {
-
 }
 
 section span {
@@ -294,7 +349,7 @@ section .reasons-style1 {
 }
 
 .reasons-style1 p {
-	padding-top: 10px;
+	padding-top: 5px;
 }
 
 section .reasons-style2 {
@@ -308,9 +363,50 @@ section .reasons-style2 {
 	margin-top: 0;
 }
 
+.reasons-style1 span {
+	display: block;
+	padding-top: 3px;
+}
+
 .reasons-style2 span {
 	display: block;
 	padding-top: 3px;
+}
+
+.number-reason-1-2 {
+	position: relative;	
+}
+
+.number-reason-3-4-5 {
+	position: relative;
+}
+
+.number-reason-1-2::before,
+.number-reason-3-4-5::before,
+.number-reason-1-2::after,
+.number-reason-3-4-5::after {
+	content: "";
+	position: absolute;
+	top: 49%;
+	left: 44%;
+	display: block;
+	width: 9px;
+	height: 2px;
+	background: #ffffff;
+}
+
+.number-reason-3-4-5::before {
+	background: #979797;
+}
+
+.number-reason-1-2::after {
+	left: 53.5%;
+
+}
+
+.number-reason-3-4-5::after {
+	background: #979797;
+	left: 53.5%;
 }
 
 section .service {
@@ -325,15 +421,15 @@ section .service {
 }
 
 .service-hotels {
-	background: url("../img/index-main-img-bg1.png") no-repeat 50% 24%;
+	background: url("../img/index-main-img-bg1.png") no-repeat 50% 23%;
 }
 
 .service-food {
-	background: url("../img/index-main-img-bg2.png") no-repeat 50% 24%;
+	background: url("../img/index-main-img-bg2.png") no-repeat 50% 23%;
 }
 
 .service-souvenirs {
-	background: url("../img/index-main-img-bg3.png") no-repeat 51% 23%;
+	background: url("../img/index-main-img-bg3.png") no-repeat 51% 22%;
 }
 
 .devils-bridge {
@@ -341,11 +437,19 @@ section .service {
 	margin-bottom: 0;
 }
 
+.devils-bridge p {
+	padding-top: 0;
+	margin-top: 0;
+}
+
+
 .date-tour {
+	position: relative;
 	width: 100%;
 	height: 243px;
 	padding-top: 55px;
 	background: #ffffff;
+	z-index: 10;
 }
 
 .date-tour h2 {
@@ -391,6 +495,7 @@ section .button-hotels {
 	box-sizing: border-box;	
 	background: #ffffff;
 	padding-top: 1px;	
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 input,
@@ -478,6 +583,11 @@ button {
 	background: #ffffff;
 }
 
+.button,
+.amount {
+	vertical-align: top;
+}
+
 .button {	
 	width: 38px;
 	height: 38px;	
@@ -489,14 +599,15 @@ button {
 	height: 36px;
 	background: #f2f2f2;
 	margin-left: -4px;
-	margin-right: -4px;
+	margin-right: -4px;	
+	text-align: center;
 }
 
 .button-search {
-	width: 460px;
+	width: 459px;
 	height: 57px;
 	margin: 0 auto;	
-	display: block;
+	margin-top: -3px;	
 	font-size: 21px;
 	line-height: 26px;
 	color: #ffffff;
@@ -546,10 +657,29 @@ button {
 	float: left;
 }
 
+.column-left input,
+.column-center input {
+	cursor: pointer;
+}
+
 .column-center {
 	float: left;
-
 }
+
+input[type="checkbox"] {
+	display: none;
+}
+
+input[type="checkbox"] + label {
+	display: block;
+	border: 1px solid red;
+	padding: 5px;
+	padding-left: 40px;
+}
+
+/*input[type="checkbox"] {
+	display: none;
+}*/
 
 .column-center p {
 	padding-left: 80px;
@@ -570,47 +700,115 @@ button {
 }
 
 .column-right input {
-	margin-top: 0px;
-	width: 157px;
-	height: 28px;	
-	background: none;	
+	margin-top: 2px;
+	width: 50px;
+	height: 24px;
+	font-size: 14px;
+	color: #ffffff;	
+	background: none;
+	text-align: left;	
 }
 
-.price-from {
-	margin-left: 10px;		
-	border-bottom-left-radius: 3px;
-	border-top-left-radius: 3px;
+.column-right label {
+	font-size: 14px;
+	text-align: center;
+}
+
+.price-from-to {
+	position: relative;
+	width: 318px;
+	height: 35px;
+	margin-left: 10px;	
+	margin-bottom: 20px;	
+	border-radius: 2px;	
+	padding-top: 2px;
 	text-align: center;	
 	border: 2px solid #ffffff;
-	border-right: none;
+	box-sizing: border-box;	
+}
+
+.price-from-to::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	width: 2px;
+	height: 22px;
+	background: #ffffff;
 }
 
 .column-right p {
 	margin-bottom: 9px;
 }
 
+.price-from {
+	margin-left: 35px;	
+}
+
 .price-to {
-	margin-left: -4px;	
-	border-bottom-right-radius: 3px;
-	border-top-right-radius: 3px;
-	text-align: center;	
-	border: 2px solid #ffffff;
-	border-left: none;
+	margin-left: 70px;	
+}
+
+.range-controls {
+	position: relative;
+	margin-left: 10px;
+	width: 318px;
+	height: 10px;
+}
+
+.scale {	
+	
+	width: 100%;
+	height: 2px;
+	background: #867c7c;	
+	cursor: pointer;
+}
+
+.bar {
+	width: 80%;
+	height: 2px;
+	background: #ffffff;
+}
+
+.toddler {
+	display: inline-block;
+	position: absolute;
+	top: -9px;
+	width: 4px;
+	height: 4px;
+	background: #ababab;
+	border: 8px solid #ffffff;
+	border-radius: 50%;
+	box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;	
+}
+
+.toddler-min {
+	left: 0;
+}
+
+.toddler-min {
+	left: 80%;
+}
+
+.toddler:hover {
+	background: #1c4f80;
 }
 
 .column-right button {
 	display: block;
-	width: 138px;
+	width: 137px;
 	height: 36px;
 	margin: 0;
-	margin-top: 55px;
+	margin-top: 35px;
 	margin-left: 95px;		
-	border-radius: 3px;
+	border-radius: 2px;
 	color: #ffffff;
 	text-transform: uppercase;
 	border: 2px solid #ffffff;
 	background: none;
-
+	cursor: pointer;
 }
 
 .column-right button:hover {
@@ -654,40 +852,76 @@ button {
 	margin-right: 20px;	
 }
 
-.results li:first-child {
-	margin-left: -5px;
+.results li button {
+	padding: 0;
+	margin-left: 2px;
+	margin-right: 8px;
+	background-color: #ffffff;	
+	font-size: 12px;
+	line-height: 12px;	
+	letter-spacing: -1px;
+	color: #cacaca;
+	text-transform: uppercase;
+	border-bottom: 1px dotted #81b3d2;	
+	cursor: pointer;	
 }
 
-.results li button {
-	background-color: #ffffff;
-	font-size: 12px;	
-	letter-spacing: -1px;
+.results li button:hover {
+	opacity: 1;
 	color: #81b3d2;
-	text-transform: uppercase;
+}
+
+.results li button:active {
+	opacity: 1;
+	color: #000000;
+	border-bottom: none;	
 }
 
 .results .separation-active {
-	color: #d1d1d1;
-	text-decoration: underline dotted #81b3d2;
+	color: #81b3d2;
+	border-bottom: none;
 }
 
-.results .separation-active button {
-	color: #d1d1d1;
-	text-decoration: underline dotted #81b3d2;	
-} 
+.results .separation-active:active {
+	color: #81b3d2;
+}
 
 .button-up-down {
 	float: right;
-	width: 22px;
-	height: 22px;
-	margin-top: 37px;
-	/*дополнительные стили для кнопок*/
-	border: 1px solid grey;
-	background: #ff0000;
+	width: 15px;
+	height: 15px;
+	margin-top: 39px;
+	margin-right: 5px;	
+	opacity: 0.3;
+	background: none;	
+	background: url("../img/hotels_up-down.png") no-repeat;	 
+	cursor: pointer;
 }
 
 .down {
-	margin-right: 69px;
+	margin-right: 72px;
+	background-position: -42px 0;
+	opacity: 1;
+}
+
+.up {
+	margin-top: 40px;
+	background-position: -1px 1px;
+}
+
+.down:hover,
+.up:hover {
+	opacity: 1;
+}
+
+/*.down:active {
+	background-position: -42px 0;
+	opacity: 1;
+}*/
+
+.up:active {
+	background-position: -29px 1px;
+	opacity: 1;
 }
 
 .section-hotels {
@@ -782,10 +1016,33 @@ button {
 	margin-right: 7px;	
 	padding-left: 15px;
 	padding-top: 3px;
+	position: relative;
 	float: right;
 	box-sizing: border-box;	
 	width: 110px;
 	height: 26px;	
 	background: #ffffff;
-	color: #666666;		
+	color: #666666;			
+}
+
+.catalog-item .rating::before {
+	content: "";	
+	display: block;
+	position: absolute;
+	top: -65px;
+	right: -5px;
+	width: 96px;
+	height: 25px;
+	background: url(../img/hotels-star.png) repeat-x;	
+}
+
+.catalog-item .rating-2star::before {
+	width: 48px;
+}
+/*.catalog-item .rating-2star::before {
+	width: 48px;	
+}*/
+
+.catalog-item .rating-3star::before {
+	width: 72px;
 }

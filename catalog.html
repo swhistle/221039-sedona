@@ -12,7 +12,7 @@
                     <ul>
                         <li><a href="index.html">Информация</a></li>
                         <li class="header-menu-photo"><a href="#">Фото и видео</a></li>                     
-                        <li><a href="catalog.html">Гостиницы</a></li>
+                        <li class="header-li-active"><a href="catalog.html">Гостиницы</a></li>
                         <li><a href="#">Карта штата</a></li>
                     </ul>                                          
                 </nav>
@@ -44,14 +44,19 @@
 
                 <div class="column column-right">
                     <p>Стоимость в сутки (Р):</p>
-                    
-                        <label></label>                     
-                        <input type="text" name="price_from" class="price-from">
-                        <label></label>                     
-                        <input type="text" name="price_to" class="price-to"><br>
-                    
-                     <!-- место для линейки -->
-                                     
+                    <div class="price-from-to">
+                        <label class="price-from">от                     
+                        <input type="text" name="price_from" value="0"></label>
+                        <label class="price-to">до                   
+                        <input type="text" name="price_to" value="3000"></label>
+                    </div>   
+                    <div class="range-controls">
+                        <div class="scale">
+                            <div class="bar"></div>
+                        </div>
+                        <div class="toddler toddler-min"></div>
+                        <div class="toddler toddler-max"></div>
+                    </div>                            
                     <button type="submit" name="show">Показать</button>
                 </div>
             </form>                      
@@ -62,9 +67,9 @@
                     <span class="found">Найдено: 3</span>
                     <span class="separation">Сортировка:</span>                
                     <ul>
-                        <li><button type="button">По цене</button></li>
-                        <li class="separation-active"><button type="button">По типу</button></li>
-                        <li class="separation-active"><button type="button">По рейтингу</button></li>
+                        <li><button type="button" class="separation-active">По цене</button></li>
+                        <li><button type="button">По типу</button></li>
+                        <li><button type="button">По рейтингу</button></li>
                     </ul>
                     <button type="button" class="button-up-down down"></button>
                     <button type="button" class="button-up-down up"></button> 
@@ -78,7 +83,7 @@
                         <span>от 3500 Р.</span><br>
                         <a href="#" class="btn-about">подробнее</a>
                         <a href="#" class="btn-reserve">забронировать</a>                        
-                        <span class="rating">Рейтинг: 8,5</span>
+                        <span class="rating rating-4star">Рейтинг: 8,5</span>
                     </div>
                 </section>
 
@@ -90,7 +95,7 @@
                         <span>от 2000 Р.</span><br>
                         <a href="#" class="btn-about">подробнее</a>
                         <a href="#" class="btn-reserve">забронировать</a>                        
-                        <span class="rating">Рейтинг: 8,9</span>
+                        <span class="rating rating-2star">Рейтинг: 8,9</span>
                     </div>
                 </section>
 
@@ -102,7 +107,7 @@
                         <span>от 4000 Р.</span><br>
                         <a href="#" class="btn-about">подробнее</a>
                         <a href="#" class="btn-reserve">забронировать</a>                       
-                        <span class="rating">Рейтинг: 9,2</span>
+                        <span class="rating rating-3star">Рейтинг: 9,2</span>
                     </div>
                 </section>                   
             </article>                                            	
@@ -113,17 +118,15 @@
             <div class="container">
                 <section class="footer-tag">#Visitsedona</section>
                 <section class="footer-social">
-                    <a class="social-btn social-btn-tw" href="#"></a>
-                    <a class="social-btn social-btn-fb" href="#"></a>
-                    <a class="social-btn social-btn-ytb" href="#"></a>                   
+                    <a class="social-btn social-btn-tw" href="https://twitter.com/htmlacademy_ru"></a>
+                    <a class="social-btn social-btn-fb" href="https://www.facebook.com/htmlacademy"></a>
+                    <a class="social-btn social-btn-ytb" href="https://www.youtube.com/user/htmlacademyru"></a>                   
                 </section>
                 <section class="footer-copyright">
                     <span>Website by</span>
-                    <a href="#"><img src="img/footer-logo-HA.png" width="113" height="39" alt="HTML ACADEMY"></a>
+                    <a class="footer-html-academy" href="https://htmlacademy.ru"></a>
                 </section>
-
-            </div>
-            
+            </div>            
         </footer>
     </body>
 </html>
