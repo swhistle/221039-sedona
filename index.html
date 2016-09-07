@@ -37,9 +37,8 @@
                     <span class="number-reason-1-2">№1</span>
                     <p>Седона - не аттракцион для туристов,<br>
                     Там течет своя жизнь</p>                	
-                </div>                    
-                
-                    <img src="img/index-main-img1.jpg" width="800" height="256" class="index-img">                	
+                </div>
+                <div class="index-image"><img src="img/index-main-img1.jpg" width="800" height="256"></div>                	
                                
             </section>
 
@@ -62,9 +61,7 @@
             </section>
 
             <section>
-                
-                	<img src="img/index-main-img2.jpg" width="800" height="256" class="index-img">
-                
+                <div class="index-image"><img src="img/index-main-img2.jpg" width="800" height="256"></div>                
                 <div class="reasons reasons-style1 devils-bridge">
                     <h3>Там есть<br>
                     мост дьявола</h3>
@@ -107,23 +104,25 @@
                     <div class="date-form1 date-in">
                         <label for="date-in">Дата заезда:</label>
                         <input type="text" name="date-in" id="date-in" placeholder="24 апреля 2016" class="date">
+                        <div class="calendar"></div>
                     </div><br>
                     <div class="date-form1 date-out">
                         <label for="date-out">Дата выезда:</label>
                         <input type="text" name="date-out" id="date-out" placeholder="4 июля 2016" class="date">
+                        <div class="calendar"></div>
                     </div><br>
                     <div class="date-form2">
                         <label for="amount-adults" class="adults-children adults">Взрослые:</label>
-                        <div class="container-form-box1">
-                            <button type="button" class="button"><img src=""></button>                    
+                        <div class="container-form-box box1">
+                            <button type="button" class="button btn-minus"></button>                    
                             <input type="text" name="amount-adults" id="amount-adults" value="2" class="amount">
-                            <button type="button" class="button"><img src=""></button>
+                            <button type="button" class="button btn-plus"></button>
                         </div>            
                         <label for="amount-children" class="adults-children children">Дети:</label>
-                        <div class="container-form-box2">                
-                            <button type="button" class="button"><img src=""></button>
+                        <div class="container-form-box box2">                
+                            <button type="button" class="button btn-minus"></button>
                             <input type="text" name="amount-children" id="amount-children" value="0" class="amount">
-                            <button type="button" class="button"><img src=""></button><br>
+                            <button type="button" class="button btn-plus"></button><br>
                         </div>
                     </div>
                     <button type="submit" class="button-search">Найти</button>
