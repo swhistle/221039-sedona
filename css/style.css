@@ -17,17 +17,6 @@ body {
 	font-family: 'PT Sans Narrow', sans-serif;	
 	letter-spacing: -1px;
 	background-color: #f2f2f2;
-
-
-	/*ИЗОБРАЖЕНИЕ МАКЕТА ФОНОМ*/
-	/*background: #f2f2f2 url("../img/sedona-index-1200.jpg") no-repeat 50% 0;
-	background-size: 1280px auto;
-	opacity: 0.7;*/
-
-	/*background: #f2f2f2 url("../img/sedona-hotels-1200.jpg") no-repeat 50% 0;
-	background-size: 1280px auto;
-	opacity: 0.7;*/
-	
 }
 
 h2 {
