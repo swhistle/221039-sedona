@@ -14,7 +14,7 @@ body {
 	text-transform: uppercase;
 	color: #333333;
 	font-weight: normal;
-	font-family: 'PT Sans Narrow';	
+	font-family: 'PT Sans', sans-serif;
 	letter-spacing: 0px;	
 	background-color: #f2f2f2;
 
@@ -23,7 +23,7 @@ body {
 	background-size: 1280px auto;
 	opacity: 0.7;*/
 
-	/*background: #f2f2f2 url("../img/sedona-hotels-1200.jpg") no-repeat 50% 0;
+	/*background: #f2f2f2 url("../img/sedona-hotels.jpg") no-repeat 50% 0;
 	background-size: 1280px auto;
 	opacity: 0.7;*/
 	
@@ -58,8 +58,7 @@ h3 {
 	min-height: 56px;
 	width: 100%;
 	margin: 0;
-	background-color: #ffffff;
-	font-weight: bold;		
+	background-color: #ffffff;			
 	color: #000000;
 	position: relative;	
 }
@@ -74,10 +73,11 @@ h3 {
 	float: left;	
 	width: 20%;
 	height: 56px;
-	box-sizing: border-box;		
+	box-sizing: border-box;	
+	font-weight: bold;	
 	text-align: right;	
 	margin: 0;
-	padding: 1.2% 6%;
+	padding: 1.25% 6%;
 	padding-left: 32px;
 	font-size: 14px;
 	line-height: 26px;
@@ -202,7 +202,7 @@ footer.footer-page {
 }
 
 .social-btn-tw {
-	background-position: 5px 5px;	
+	background-position: 5px 6px;	
 }
 
 .social-btn-fb {
@@ -236,12 +236,7 @@ footer.footer-page {
 	width: 220px;
 	min-height: 40px;
 	margin-top: 40px;
-	margin-left: 217px;	
-}
-
-.footer-copyright img {
-	vertical-align: middle;
-	padding-left: 4px;	
+	margin-left: 215px;	
 }
 
 .footer-html-academy {
@@ -249,6 +244,7 @@ footer.footer-page {
 	vertical-align: middle;
 	width: 120px;
 	height: 40px;
+	padding-left: 8px;
 	background: url("../img/footer-logo-ha.png") no-repeat;
 	background-position: 50% 50%;
 }
@@ -263,7 +259,6 @@ footer.footer-page {
 	background-position: 50% 50%;
 	opacity: 0.3;
 }
-
 
 /*СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ*/
 
@@ -289,9 +284,11 @@ footer.footer-page {
 	width: 500px;
 	min-height: 50px;
 	margin: 0 auto;
-	margin-top: 55px;
+	margin-left: 333px;
+	margin-top: 57px;
 	font-size: 21px;
 	line-height: 26px;
+	letter-spacing: 1px;
 	padding-left: 15px;
 	text-align: center;
 }
@@ -300,7 +297,7 @@ footer.footer-page {
 	width: 550px;
 	min-height: 14px;
 	margin: 0 auto;
-	margin-top: 30px;
+	margin-top: 27px;
 	font-size: 14px;
 	line-height: 26px;
 	text-align: center;			
@@ -314,6 +311,7 @@ section h3 {
 	font-size: 21px;
 	line-height: 21px;		
 	font-weight: bold;
+	margin-left: 20px;
 }
 
 section span {
@@ -360,13 +358,17 @@ section .reasons-style1 {
 }
 
 .reasons-style1 p {
-	padding-top: 5px;
+	padding-top: 0;
 }
 
 section .reasons-style2 {
 	background: #eeeeee;
 	text-align: center;
-	padding-top: 28px; 
+	padding-top: 25px; 
+}
+
+.reasons-style2 h3 {
+	margin-left: 5px;
 }
 
 .reasons-style2 p {
@@ -429,6 +431,10 @@ section .service {
 	background-color: #ffffff;
 }
 
+.service h3 {
+	margin-left: 0;
+}
+
 .service p {
 	padding-top: 5px;
 	width: 300px;
@@ -447,21 +453,11 @@ section .service {
 	background: url("../img/index-main-img-bg3.png") no-repeat 50% 22%;
 }
 
-.devils-bridge {
-	margin-right: 0;
-	margin-bottom: 0;
-}
-
-.devils-bridge p {
-	padding-top: 0;
-	margin-top: 0;
-}
-
 .date-tour {
 	position: relative;
 	width: 100%;
-	height: 243px;
-	padding-top: 48px;
+	height: 245px;
+	padding-top: 46px;
 	background: #ffffff;
 	z-index: 10;
 }
@@ -473,14 +469,14 @@ section .service {
 	padding: 10px;	
 	color: #000000;
 	text-align: center;
+	letter-spacing: 0;
 }
 
 .date-tour p {
 	width: 500px;
 	margin: 0 auto;
 	margin-top: 15px;
-	min-height: 40px;
-	padding-left: 22px;
+	min-height: 40px;	
 	line-height: 24px;	
 	color: #333333;
 	text-align: center;
@@ -488,8 +484,8 @@ section .service {
 
 section .button-hotels {
 	display: block;
-	width: 570px;
-	height: 85px;
+	width: 568px;
+	height: 87px;
 	margin: 0 auto;
 	margin-top: 45px;
 	padding-top: 30px;	
@@ -536,7 +532,7 @@ button {
 }
 
 .date-form1 label {
-	padding-top: 10px;
+	padding-top: 8px;	
 	display: inline-block;
 	box-sizing: border-box;
 	font-weight: bold;
@@ -643,11 +639,10 @@ button {
 }
 
 .container-form-box {	
-	width: 114px;
-	height: 38px;
-	background: #f2f2f2;
+	width: 122px;
+	height: 38px;	
 	position: relative;
-	font-size: 14px;
+	font-size: 0;
 	text-align: center;
 }
 
@@ -672,19 +667,18 @@ button {
 	height: 36px;
 	background: #f2f2f2;
 	text-align: center;	
+	display: inline-block;
 }
 
 .button {	
-	width: 34px;
-	height: 34px;	
+	width: 38px;
+	height: 38px;	
 	background: #f2f2f2;
-	position: absolute;
+	display: inline-block;
 	cursor: pointer;
 }
 
-.btn-minus {
-	top: 2px;
-	left: 2px;
+.btn-minus {	
 	background: #f2f2f2 url("../img/spritesheet.png") no-repeat;
 	background-position: -315px 6px; 	
 }
@@ -699,9 +693,7 @@ button {
 	background-position: -252px 6px;
 }
 
-.btn-plus {
-	top: 2px;
-	left: 78px;
+.btn-plus {	
 	background: #f2f2f2 url("../img/spritesheet.png") no-repeat;
 	background-position: -347px 2px;
 }
@@ -742,7 +734,7 @@ button {
 
 .form-hotels {
 	width: 100%;
-	min-height: 215px;
+	min-height: 217px;
 	margin: 0;	
 	background: #4a779f url("../img/hotels-filter background.jpg") 50% 0;	
 	background-size: 1200px 562px;
@@ -773,7 +765,7 @@ button {
 
 .column-center {
 	float: left;
-	padding-left: 78px;
+	padding-left: 80px;
 }
 
 input[type="checkbox"] {
@@ -944,13 +936,15 @@ input[type="checkbox"]:checked + label::after {
 	width: 100%;
 	height: 88px;
 	background: #ffffff;
+	padding-top: 20px;
+	box-sizing: border-box;
 	border-bottom: 1px solid #e5e5e5;	
 }
 
 .found {
 	display: inline-block;
 	margin-left: 70px;
-	margin-top: 32px;
+	
 	font-size: 21px;
 	line-height: 26px;	
 	font-weight: bold;
@@ -958,8 +952,8 @@ input[type="checkbox"]:checked + label::after {
 
 .separation {
 	display: inline-block;
-	margin-left: 40px;
-	margin-top: 32px;
+	margin-left: 50px;
+	
 	font-size: 12px;
 	line-height: 18px;	
 }
@@ -976,8 +970,8 @@ input[type="checkbox"]:checked + label::after {
 
 .results li button {
 	padding: 0;
-	margin-left: 2px;
-	margin-right: 8px;
+	margin-left: 0px;
+	margin-right: 6px;
 	background-color: #ffffff;	
 	font-size: 12px;
 	line-height: 12px;	
@@ -1011,7 +1005,7 @@ input[type="checkbox"]:checked + label::after {
 	float: right;
 	width: 15px;
 	height: 15px;
-	margin-top: 39px;
+	margin-top: 20px;
 	margin-right: 5px;	
 	opacity: 0.3;	
 	background: url("../img/spritesheet.png") no-repeat;	 
@@ -1020,12 +1014,11 @@ input[type="checkbox"]:checked + label::after {
 
 .down {
 	margin-right: 72px;
-	background-position: -569px -10px;
+	background-position: -566px -10px;
 	opacity: 1;
 }
 
-.up {
-	margin-top: 40px;
+.up {	
 	background-position: -476px -10px;
 }
 
@@ -1053,8 +1046,8 @@ input[type="checkbox"]:checked + label::after {
 
 .section-hotels img {
 	float: left;
-	margin: 30px 0;
-	margin-left: 73px;
+	margin: 29px 0;
+	margin-left: 72px;
 }
 
 .catalog-item {
@@ -1070,8 +1063,10 @@ input[type="checkbox"]:checked + label::after {
 
 .catalog-item h3 {
 	width: 50%;
-	margin-top: -3px;	
-	margin-bottom: 10px;	
+	margin-top: -4px;	
+	margin-bottom: 10px;
+	margin-left: 0;	
+	letter-spacing: 0;
 }
 
 .catalog-item h3 a {
@@ -1097,8 +1092,8 @@ input[type="checkbox"]:checked + label::after {
 	display: inline-block;
 	box-sizing: border-box;
 	width: 110px;
-	height: 28px;
-	margin-top: 8px;
+	height: 27px;
+	margin-top: 9px;
 	padding-top: 3px;
 	text-align: center;	
 	text-decoration: none;	
@@ -1132,7 +1127,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .catalog-item .rating {	
-	margin-top: 14px;
+	margin-top: 8px;
 	margin-right: 0px;	
 	padding-left: 15px;
 	padding-top: 3px;
@@ -1142,15 +1137,15 @@ input[type="checkbox"]:checked + label::after {
 	width: 110px;
 	height: 26px;	
 	background: #f2f2f2;
-	color: #666666;			
+	color: #666666;				
 }
 
 .catalog-item .rating::before {
 	content: "";	
 	display: block;
 	position: absolute;
-	top: -69px;
-	right: -5px;
+	top: -62px;
+	right: -3px;
 	width: 96px;
 	height: 25px;
 	background: url("../img/hotels-star.png") repeat-x;	
