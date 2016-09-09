@@ -15,14 +15,7 @@ body {
     font-weight: normal;
     font-family: 'PT Sans', sans-serif;
     letter-spacing: 0px;
-    background-color: #f2f2f2;
-    /*ИЗОБРАЖЕНИЕ МАКЕТА ФОНОМ*/
-    /*background: #f2f2f2 url("../img/sedona-index.jpg") no-repeat 50% 0;
-	background-size: 1280px auto;
-	opacity: 0.7;*/
-    /*background: #f2f2f2 url("../img/sedona-hotels.jpg") no-repeat 50% 0;
-	background-size: 1280px auto;
-	opacity: 0.7;*/
+    background-color: #f2f2f2;   
 }
 h2 {
     font-size: 30px;
@@ -290,7 +283,7 @@ section div {
     text-align: center;
 }
 .reasons p {
-    width: 300px;
+    width: 310px;
     margin: 0 auto;
 }
 section .reasons-style1 {
@@ -435,7 +428,7 @@ section .button-hotels {
     padding-top: 1px;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
     color: #000000;
-    /*display: none;*/
+    display: none;
 }
 input,
 textarea,
