@@ -121,6 +121,9 @@ footer.footer-page {
     background: url("../img/index-footer-map.jpg") no-repeat 50% 0;
     z-index: 5;
 }
+.footer-index .footer-page {
+    opacity: 0.9;    
+}
 .footer-tag,
 .footer-social,
 .footer-copyright {
