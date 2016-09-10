@@ -16,15 +16,6 @@ body {
     font-family: 'PT Sans', sans-serif;
     letter-spacing: 0px;
     background-color: #f2f2f2; 
-
-    /*ИЗОБРАЖЕНИЕ МАКЕТА ФОНОМ*/
-    /*background: #f2f2f2 url("../img/sedona-index.jpg") no-repeat 50% 0;
-    background-size: 1280px auto;
-    opacity: 0.7;*/
-
-    /*background: #f2f2f2 url("../img/sedona-hotels.jpg") no-repeat 50% 0;
-    background-size: 1280px auto;
-    opacity: 0.7;*/
 }
 h2 {
     font-size: 30px;
@@ -98,6 +89,8 @@ main {
     position: absolute;
     top: 0;
     left: calc(50% - 69px);
+    border: none;
+    outline: none;
 }
 .header-li-active {
     color: #766357;
@@ -122,7 +115,7 @@ main {
     box-shadow: none;
 }
 footer.footer-page {
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
 }
 .footer-map {
     position: relative;
@@ -800,7 +793,7 @@ input[type="checkbox"]:checked + label::after {
     width: 100%;
     height: 88px;
     background: #ffffff;
-    padding-top: 20px;
+    padding-top: 19px;
     box-sizing: border-box;
     border-bottom: 1px solid #e5e5e5;
 }
@@ -825,23 +818,24 @@ input[type="checkbox"]:checked + label::after {
     margin-top: 20px;
     margin-right: 20px;
 }
-.results li button {
+.results li a {
     padding: 0;
     margin-left: 0px;
-    margin-right: 6px;
+    margin-right: 12px;
     background-color: #ffffff;
     font-size: 12px;
     line-height: 12px;
     color: #cacaca;
     text-transform: uppercase;
+    text-decoration: none;
     border-bottom: 1px dotted #81b3d2;
     cursor: pointer;
 }
-.results li button:hover {
+.results li a:hover {
     opacity: 1;
     color: #81b3d2;
 }
-.results li button:active {
+.results li a:active {
     opacity: 1;
     color: #000000;
     border-bottom: none;
@@ -970,8 +964,7 @@ input[type="checkbox"]:checked + label::after {
     background: #503e33;
     color: #857871;
 }
-.catalog-item .rating {
-    
+.catalog-item .rating {    
     margin-right: 0px;
     padding-left: 15px;
     padding-top: 3px;
@@ -989,13 +982,13 @@ input[type="checkbox"]:checked + label::after {
     position: absolute;
     top: -63px;
     right: -3px;
-    width: 96px;
+    width: 86px;
     height: 25px;
     background: url("../img/hotels-star.png") repeat-x;
 }
 .catalog-item .rating-2star::before {
-    width: 48px;
+    width: 42px;
 }
 .catalog-item .rating-3star::before {
-    width: 72px;
+    width: 64px;
 }
