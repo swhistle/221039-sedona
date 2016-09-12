@@ -422,6 +422,7 @@ section .button-hotels {
 .date-tour a {
     text-decoration: none;
 }
+/*ВСПЛЫВАЮЩАЯ ФОРМА*/
 .form-index {
     width: 568px;
     min-height: 395px;
@@ -433,10 +434,41 @@ section .button-hotels {
     padding-top: 1px;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
     color: #000000;
-    display: none;
+    display: none;       
 }
+@keyframes animation1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes animation2 {
+    0% {
+        transform: scale(0.1) translateY(-1780px);
+    }  
+    10% {
+        transform: scale(0.1) translateY(-100px);
+    }
+     
+    100% {
+        transform: scale(1);
+    }    
+}
+@keyframes animation3 {
+    0% {
+        transform: scaleX(1) scaleY(0.1) translateY(-1780px);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .form-index-show {
     display: block;
+    animation-name: animation3;
+    animation-duration: 0.7s;  
 }
 input,
 textarea,
