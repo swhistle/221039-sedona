@@ -16,6 +16,7 @@ body {
     font-family: 'PT Sans', sans-serif;
     letter-spacing: 0px;
     background-color: #f2f2f2; 
+    padding: 0 10px;
 }
 h2 {
     font-size: 30px;
@@ -95,10 +96,10 @@ main {
 .header-li-active {
     color: #766357;
 }
-.header-li-active:hover {
-    color: #604e43;
+.header-li-active a:hover {
+    color: #000000;    
 }
-.header-li-active:active {
+.header-li-active a:active {
     opacity: 0.3;
 }
 /*ОБЩИЕ СТИЛИ ДЛЯ "ПОДВАЛА"*/
@@ -152,40 +153,79 @@ footer.footer-page {
     width: 46px;
     height: 48px;
     margin-right: 6px;
-    background-color: #81b3d2;
-    background: #81b3d2 url("../img/spritesheet.png") no-repeat;
+    background-color: #81b3d2;    
     position: relative;
     z-index: 10;
 }
+.social-btn::before,
 .social-btn::after {
     content: "";
-    position: relative;
-    top: 8px;
-    left: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: block;
-    width: 30px;
-    height: 30px;
-    background: none;
+    width: 35px;
+    height: 35px;       
     z-index: 5;
+    background-color: none;
 }
-.social-btn-tw {
+.social-btn::before {  
+    background: url("../img/spritesheet.png") no-repeat;
+}
+.social-btn::after { 
+    top: 8px;
+    left: 8px;         
+}
+.social-btn-tw::before {
     background-position: 5px 6px;
 }
-.social-btn-fb {
+.social-btn-fb::before {
     background-position: -30px 3px;
 }
-.social-btn-ytb {
+.social-btn-ytb::before {
     background-position: -64px 5px;
 }
-.social-btn-tw:hover,
-.social-btn-fb:hover,
-.social-btn-ytb:hover {
+.social-btn:hover {
     background-color: #669ec0;
+    box-shadow: 0 0 5px 3px rgba(102, 158, 192, 0.5);
+    transition: 0.5s ease;
 }
-.social-btn-tw:active,
-.social-btn-fb:active,
-.social-btn-ytb:active {
-    background-color: #5496bd;
+.social-btn:not(hover) {
+    transition: 0.5s ease;
+}
+
+/*.social-btn:hover.social-btn::before {
+    transform-origin: 75% 75%;
+    transform: scale(1.2) scaleX(-1) scaleX(-1);
+    transform: rotate(-360deg) scale(1.2);
+    transition: 0.7s;
+} */
+.social-btn:hover.social-btn::before {    
+    animation-name: icon-animation1;
+    animation-duration: 0.8s;
+}
+@keyframes icon-animation1 {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-40px);
+    }
+    40% {
+        transform: translateY(40px);
+    }
+    60% {
+        transform: translateY(0);
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.social-btn:not(hover).social-btn::before {    
+    transition: 0.7s;
 }
 .social-btn-tw:active::after,
 .social-btn-fb:active::after,
@@ -206,15 +246,13 @@ footer.footer-page {
     height: 40px;
     padding-left: 8px;
     background: url("../img/footer-logo-ha.png") no-repeat;
-    background-position: 50% 50%;
+    
 }
 .footer-html-academy:hover {
-    background: url("../img/footer-logo-ha-hover.png") no-repeat;
-    background-position: 50% 50%;
+    background: url("../img/footer-logo-ha-hover.png") no-repeat;  
 }
 .footer-copyright a:active {
-    background: url("../img/footer-logo-ha.png") no-repeat;
-    background-position: 50% 50%;
+    background: url("../img/footer-logo-ha.png") no-repeat;   
     opacity: 0.3;
 }
 /*СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ*/
@@ -418,6 +456,15 @@ section .button-hotels {
     box-sizing: border-box;
     text-transform: uppercase;
     color: #ffffff;
+}
+section .button-hotels:hover {
+    background: #665347;
+}
+section .button-hotels:active {
+    padding-top: 28px;
+    background: #564337;
+    border: 2px solid #362317;
+    color: #999999;
 }
 .date-tour a {
     text-decoration: none;
@@ -972,10 +1019,13 @@ input[type="checkbox"]:checked + label::after {
     height: 27px;    
     padding-top: 3px;
     text-align: center;
-    text-decoration: none;
-    background: #81b3d2;
-    font-size: 14px;
-    color: #ffffff;
+    text-decoration: none;   
+    font-size: 14px;    
+    border-radius: 2px;
+    color: #ffffff;    
+}
+.btn-about {
+    background: #81b3d2;   
 }
 .btn-reserve {
     width: 142px;
@@ -983,7 +1033,13 @@ input[type="checkbox"]:checked + label::after {
     margin-left: 6px;
 }
 .btn-about:hover {
-    background: #669ec0;
+    background: #669ec0;    
+    box-shadow: 5px 0 5px 2px rgba(52, 108, 142, 0.3);
+    transition: 0.5s ease;
+    transform: scale(1.1) translateX(-10px);    
+}
+.btn-about:not(hover) {    
+    transition: 0.5s ease;   
 }
 .btn-about:active {
     background: #5496bd;
@@ -991,6 +1047,12 @@ input[type="checkbox"]:checked + label::after {
 }
 .btn-reserve:hover {
     background: #604e43;
+    box-shadow: -5px 0 5px 2px rgba(96, 78, 67, 0.3);
+    transition: 0.5s ease;
+    transform: scale(1.1) translateX(10px);
+}
+.btn-reserve:not(hover) {    
+    transition: 0.5s ease;   
 }
 .btn-reserve:active {
     background: #503e33;
