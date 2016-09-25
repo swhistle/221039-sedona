@@ -54,7 +54,6 @@ main {
 .header-main-menu ul {
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
 }
 .header-main-menu li {
     float: left;
@@ -68,7 +67,7 @@ main {
     padding-left: 32px;
     font-size: 14px;
     line-height: 26px;
-    list-style-type: none;
+    list-style-type: none;    
     background-color: #ffffff;
 }
 .header-main-menu li a {
@@ -80,7 +79,11 @@ main {
     float: right;
 }
 .header-main-menu a:hover {
-    color: #81b3d2;
+    color: #81b3d2;    
+    transition: 0.5s ease;
+}
+.header-main-menu a:not(hover) {    
+    transition: 3s ease;
 }
 .header-main-menu a:active {
     color: #cacaca;
@@ -91,15 +94,48 @@ main {
     top: 0;
     left: calc(50% - 69px);
     border: none;
-    outline: none;
+    outline: none;    
 }
-.header-li-active {
+.header-logo:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease;
+    transform-origin: 50% 0;
+}
+.header-logo:not(hover) {
+    transition: 0.5s ease;
+}
+header .index-header-li-active {
     color: #766357;
+    /*position: relative;
+    z-index: 4;*/
+} 
+/*header .index-header-li-active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 240px;
+    height: 56px;
+    top: 0;
+    left: 0;
+   /* outline: 2px solid red;*/
+    background: url("../img/index-header-background.jpg") no-repeat;
+    z-index: -4;
+}*/
+header .hotels-header-li-active {
+    color: #766357;
+    /*background: url("../img/hotels-header-background.jpg") no-repeat;*/
 }
-.header-li-active a:hover {
-    color: #000000;    
+.index-header-li-active a:hover,
+.hotels-header-li-active a:hover {
+    color: #604e43;
+    transition: 0.5s ease;    
 }
-.header-li-active a:active {
+.index-header-li-active a:not(hover),
+.hotels-header-li-active a:not(hover) { 
+    transition: 3s ease;    
+}
+.index-header-li-active a:active,
+.hotels-header-li-active a:active {
     opacity: 0.3;
 }
 /*ОБЩИЕ СТИЛИ ДЛЯ "ПОДВАЛА"*/
@@ -244,12 +280,17 @@ footer.footer-page {
     vertical-align: middle;
     width: 120px;
     height: 40px;
-    padding-left: 8px;
-    background: url("../img/footer-logo-ha.png") no-repeat;
-    
+    margin-left: 8px;
+    background: url("../img/footer-logo-ha.png") no-repeat;    
 }
 .footer-html-academy:hover {
-    background: url("../img/footer-logo-ha-hover.png") no-repeat;  
+    background: url("../img/footer-logo-ha-hover.png") no-repeat; 
+    transform: scale(1.1);
+    transform-origin: 0 50%; 
+    transition: 0.5s ease;
+}
+.footer-html-academy:not(hover) {   
+    transition: 0.5s ease;
 }
 .footer-copyright a:active {
     background: url("../img/footer-logo-ha.png") no-repeat;   
@@ -261,7 +302,7 @@ footer.footer-page {
     width: 100%;
     height: 508px;
     background: url("../img/index-main-background.jpg") no-repeat 50% -56px;
-    background-size: 1200px auto;
+    background-size: 1200px 564px;
 }
 .intro {
     width: 1200px;
@@ -322,6 +363,9 @@ section div {
 .index-image {
     width: 800px;
 }
+.index-image:hover {
+    opacity: 0.8;
+}
 .reasons {
     padding-top: 35px;
     text-align: center;
@@ -335,6 +379,10 @@ section .reasons-style1 {
     color: #ffffff;
     text-align: center;
 }
+section .reasons-style1:hover {   
+    opacity: 0.8;
+    color: #ffffff;
+}
 .reasons-style1 h3 {
     color: #ffffff;    
 }
@@ -345,6 +393,9 @@ section .reasons-style2 {
     background: #eeeeee;
     text-align: center;
     padding-top: 25px;
+}
+section .reasons-style2:hover {
+    background: #e4e4ee;
 }
 .reasons-style2 h3 {
     margin-left: 5px;
@@ -398,6 +449,9 @@ section .service {
     padding-top: 140px;
     text-align: center;
     background-color: #ffffff;
+}
+section .service:hover {
+    background-color: #ffeeee;
 }
 .service h3 {
     margin-left: 0;
@@ -458,12 +512,16 @@ section .button-hotels {
     color: #ffffff;
 }
 section .button-hotels:hover {
+    transition: 0.5s ease;
     background: #665347;
+    box-shadow: 0px 0 5px 3px rgba(96, 78, 67, 0.3);
+}
+section .button-hotels:not(hover) {
+    transition: 0.5s ease;
 }
 section .button-hotels:active {
     padding-top: 28px;
-    background: #564337;
-    border: 2px solid #362317;
+    background: #564337;   
     color: #999999;
 }
 .date-tour a {
@@ -481,41 +539,16 @@ section .button-hotels:active {
     padding-top: 1px;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
     color: #000000;
-    display: none;       
+    display: block;
+    transform-origin: 50% 0;  
+    transform: scaleY(0); 
+    transition: 0.7s ease;      
 }
-@keyframes animation1 {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes animation2 {
-    0% {
-        transform: scale(0.1) translateY(-1780px);
-    }  
-    10% {
-        transform: scale(0.1) translateY(-100px);
-    }
-     
-    100% {
-        transform: scale(1);
-    }    
-}
-@keyframes animation3 {
-    0% {
-        transform: scaleX(1) scaleY(0.1) translateY(-1780px);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
 .form-index-show {
     display: block;
-    animation-name: animation3;
-    animation-duration: 0.7s;  
+    transform-origin: 50% 0;     
+    transform: scaleY(1);
+    transition: 0.7s ease;
 }
 input,
 textarea,
@@ -689,6 +722,10 @@ button {
 }
 .button-search:hover {
     background: #669ec0;
+    transition: 0.5s ease;
+}
+.button-search:not(hover) {   
+    transition: 0.5s ease;
 }
 .button-search:active {
     background: #5496bd;
@@ -700,7 +737,7 @@ button {
     width: 100%;
     min-height: 217px;
     margin: 0;
-    background: #4a779f url("../img/hotels-filter background.jpg") 50% 0;
+    background: #4a779f url("../img/hotels-filter background.jpg") 50% -56px;
     background-size: 1200px 562px;
     font-size: 16px;
     line-height: 21px;
@@ -867,6 +904,14 @@ input[type="checkbox"]:checked + label::after {
 .column-right button:hover {
     background-color: #ffffff;
     color: #000000;
+    transition: 2s ease;
+}
+.column-right button:not(hover) {   
+    transition: 2s ease;   
+}
+.column-right button:active {
+    opacity: 0.5;
+    border: 2px solid #555555;
 }
 .results {
     width: 100%;
@@ -968,6 +1013,10 @@ input[type="checkbox"]:checked + label::after {
     margin: 29px 0;
     margin-left: 72px;
 }
+
+.section-hotels img:hover {
+    opacity: 0.8;
+}
 .catalog-item {
     width: 963px;
     height: 90px;
@@ -991,6 +1040,10 @@ input[type="checkbox"]:checked + label::after {
 }
 .catalog-item h3 a:hover {
     color: #81b3d2;
+    transition: 0.5s ease;
+}
+.catalog-item h3 a:not(hover) {
+    transition: 3s ease;
 }
 .catalog-item h3 a:active {
     opacity: 0.3;
