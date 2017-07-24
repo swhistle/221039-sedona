@@ -40,6 +40,7 @@ main {
     margin: 0 auto;
     padding: 0;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 .header-main-menu {
     min-height: 56px;
@@ -341,33 +342,49 @@ footer.footer-page {
     line-height: 26px;
     text-align: center;
 }
-section {
-    font-size: 0;
+.container-reasons-services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
 }
-section h3 {
+.reasons h3,
+.service h3 {
     font-size: 21px;
     line-height: 21px;
     font-weight: bold;
     margin-left: 20px;
 }
-section span {
+.reasons span,
+.service span {
     font-size: 14px;
     line-height: 21px;
 }
-section p {
+.reasons p,
+.service p {
     font-size: 14px;
     line-height: 21px;
 }
-section div {
+.reasons,
+.service {
     height: 256px;
-    width: 400px;
+    width: 33%;
     display: inline-block;
     box-sizing: border-box;
     vertical-align: top;
     background: #ffffff;
+    flex-grow: 2;
+    z-index: 100;
 }
 .index-image {
-    width: 800px;
+    width: 66%;
+    height: 256px;
+    flex-grow: 2;
+}
+.index-image img {
+    width: auto;
+    height: 100%;
 }
 .index-image:hover {
     opacity: 0.8;
@@ -380,14 +397,13 @@ section div {
     width: 310px;
     margin: 0 auto;
 }
-section .reasons-style1 {
+.reasons-style1 {
     background: #81b3d2;
     color: #ffffff;
     text-align: center;
 }
-section .reasons-style1:hover {
-    opacity: 0.8;
-    color: #ffffff;
+.reasons-style1:hover {
+    background-color: #91c3e2;
 }
 .reasons-style1 h3 {
     color: #ffffff;
@@ -395,12 +411,12 @@ section .reasons-style1:hover {
 .reasons-style1 p {
     padding-top: 0;
 }
-section .reasons-style2 {
+.reasons-style2 {
     background: #eeeeee;
     text-align: center;
     padding-top: 25px;
 }
-section .reasons-style2:hover {
+.reasons-style2:hover {
     background: #e4e4ee;
 }
 .reasons-style2 h3 {
@@ -450,13 +466,13 @@ section .reasons-style2:hover {
     background: #979797;
     left: 63%;
 }
-section .service {
+.service {
     height: 330px;
     padding-top: 140px;
     text-align: center;
     background-color: #ffffff;
 }
-section .service:hover {
+.service:hover {
     background-color: #ffeeee;
 }
 .service h3 {
