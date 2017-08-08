@@ -63,8 +63,6 @@ main {
     font-weight: bold;
     text-align: center;
     margin: 0;
-    font-size: 14px;
-    line-height: 26px;
     list-style-type: none;
     background-color: #ffffff;
 }
@@ -72,6 +70,8 @@ main {
     margin-right: 20%;
 }
 .header-main-menu li a {
+    font-size: 14px;
+    line-height: 26px;
     color: inherit;
     text-decoration: none;
     display: inline-block;
@@ -416,6 +416,9 @@ footer.footer-page {
 .reasons-style2:hover {
     background: #e4e4ee;
 }
+.reasons-style2-sights {
+    min-width: 240px;
+}
 .reasons-style2 h3 {
     margin-left: 5px;
     margin-bottom: 25px;
@@ -565,7 +568,7 @@ section .button-hotels:active {
     top: 100%;
     left: calc(50% - 285px);
 }
-.form-index-show {
+.form-index.active {
     display: block;
     transform-origin: 50% 0;
     transform: scaleY(1);
@@ -577,47 +580,48 @@ button {
     outline: none;
     border: none;
 }
-.date-form1 {
+.date-form1,
+.date-form2 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     width: 460px;
     height: 38px;
     margin: 0 auto;
     font-size: 14px;
     font-weight: bold;
 }
-.date-form1 label {
+.date-form1 {
+    margin-bottom: 30px;
+}
+.date-form2 {
+    margin-bottom: 55px;
+}
+.date-form1 label,
+.date-form2 label {
+    font-size: 14px;
     padding-top: 8px;
     display: inline-block;
     box-sizing: border-box;
     font-weight: bold;
+    width: 110px;
 }
 .date-form1 input {
-    display: inline-block;
-}
-.date-form2 {
-    width: 460px;
-    height: 38px;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    margin-bottom: 55px;
-}
-.date-form2 label {
-    padding-top: 10px;
-    display: inline-block;
-    box-sizing: border-box;
-    font-weight: bold;
+
 }
 .date {
-    display: block;
-    float: right;
-    width: 345px;
-    min-height: 38px;
-    margin: 0 auto;
+    // display: block;
+    // float: right;
+    // width: 345px;
+    // min-height: 38px;
+    // margin: 0 auto;
 }
 .date-form1 {
     position: relative;
 }
 .date-form1 input[type="text"] {
     background: #f2f2f2;
+    flex-grow: 2;
 }
 .date-form1 input[type="text"]:focus {
     background: #ebebeb;
@@ -656,36 +660,28 @@ button {
 .date-out {
     margin-top: 30px;
 }
-.date-form2 label {
-    font-size: 14px;
-    font-weight: bold;
-}
 .date-form2 input[type="text"] {
     font-size: 14px;
     font-weight: bold;
 }
 .adults {
-    width: 80px;
 }
 .children {
-    width: 45px;
-    padding-left: 10px;
+    padding-right: 20px;
+    text-align: right;
 }
 .container-form-box {
-    width: 124px;
     height: 38px;
     position: relative;
     font-size: 0;
     text-align: center;
+    flex-grow: 2;
 }
 .box1 {
-    margin-left: 35px;
-    margin-right: 40px;
+
 }
 .box2 {
-    float: right;
-    margin-right: 0;
-    padding-left: 8px;
+
 }
 .button,
 .amount {
@@ -1162,4 +1158,26 @@ input[type="checkbox"]:checked + label {
 }
 .catalog-item .rating-3star::before {
     width: 64px;
+}
+
+@media (max-width: 768px) {
+
+    .header-main-menu li a {
+        font-size: 12px;
+        line-height: 20px;
+        padding-top: 18px;
+    }
+
+    .reasons h3,
+    .service h3 {
+        margin-top: 0;
+        margin-left: 0;
+        font-size: 18px;
+    }
+
+    .reasons p,
+    .service p {
+        font-size: 12px;
+    }
+
 }
