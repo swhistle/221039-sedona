@@ -676,54 +676,54 @@ button {
     font-size: 0;
     text-align: center;
     flex-grow: 2;
+    display: flex;
 }
 .box1 {
-
+    justify-content: flex-start;
 }
 .box2 {
-
+    justify-content: flex-end;
 }
 .button,
 .amount {
-    vertical-align: top;
+    display: block;
 }
 .amount {
     width: 38px;
     height: 36px;
     background: #f2f2f2;
     text-align: center;
-    display: inline-block;
 }
 .button {
     width: 38px;
     height: 38px;
     background: #f2f2f2;
-    display: inline-block;
     cursor: pointer;
+    padding: 0;
 }
 .btn-minus {
     background: #f2f2f2 url("../img/spritesheet.png") no-repeat;
-    background-position: -315px 6px;
+    background-position: -310px 7px;
 }
 .btn-minus:hover {
     background: #f2f2f2 url("../img/spritesheet.png") no-repeat;
-    background-position: -189px 6px;
+    background-position: -184px 7px;
 }
 .btn-minus:active {
     background: #f2f2f2 url("../img/spritesheet.png") no-repeat;
-    background-position: -252px 6px;
+    background-position: -247px 7px;
 }
 .btn-plus {
     background: #f2f2f2 url("../img/spritesheet.png") no-repeat;
-    background-position: -347px 2px;
+    background-position: -346px 3px;
 }
 .btn-plus:hover {
     background: #f2f2f2 url("../img/spritesheet.png") no-repeat;
-    background-position: -221px 2px;
+    background-position: -220px 3px;
 }
 .btn-plus:active {
     background: #f2f2f2 url("../img/spritesheet.png") no-repeat;
-    background-position: -284px 2px;
+    background-position: -283px 3px;
 }
 .button-search {
     width: 459px;
