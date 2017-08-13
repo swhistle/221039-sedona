@@ -484,7 +484,7 @@ footer .footer-page {
     background-color: #ffffff;
 }
 .service:hover {
-    background-color: #ffeeee;
+    background-color: #ffeaea;
 }
 .service h3 {
     margin-left: 0;
@@ -1168,6 +1168,20 @@ input[type="checkbox"]:checked + label {
 }
 .catalog-item .rating-3star::before {
     width: 64px;
+}
+
+/*СТИЛИ ДЛЯ ВНУТРЕННЕЙ СТРАНИЦЫ (КАРТА ШТАТА)*/
+
+.main-map {
+    width: 100%;
+    height: auto;
+}
+
+.main-map iframe {
+    width: 100%;
+    height: calc(100vh - 56px - 120px); //высота = высота viewport - высота шапки и подвала
+    margin: 0;
+    margin-bottom: -6px;
 }
 
 @media (max-width: 768px) {
