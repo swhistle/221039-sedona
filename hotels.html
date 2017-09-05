@@ -13,10 +13,10 @@
                 <nav class="header-main-menu">
                     <ul>
                         <li><a href="index.html">Информация</a></li>
-                        <li class="header-menu-photo"><a href="#">Фото и видео</a></li>                     
+                        <li class="header-menu-photo"><a href="#">Фото и видео</a></li>
                         <li class="hotels-header-li-active"><a href="hotels.html">Гостиницы</a></li>
                         <li><a href="#">Карта штата</a></li>
-                    </ul>                                          
+                    </ul>
                 </nav>
                 <a href="index.html"><img src="img/header-logo.png" width="138" height="70" class="header-logo" alt="city of Sedona"></a>
             </div>
@@ -25,21 +25,21 @@
         <main class="container">
             <form action="https://echo.htmlacademy.ru" method="post" class="form-hotels">
                 <div class="column column-left">
-                     <p>Инфраструктура:</p>                     
+                     <p>Инфраструктура:</p>
                      <input type="checkbox" name="infrastructure" id="pool" value="pool" checked>
-                     <label for="pool">Бассейн</label>                               
+                     <label for="pool">Бассейн</label>
                      <input type="checkbox" name="infrastructure" id="parking" value="parking">
-                     <label for="parking">Парковка</label>                
+                     <label for="parking">Парковка</label>
                      <input type="checkbox" name="infrastructure" id="wi-fi" value="wi-fi">
                      <label for="wi-fi">Wi-Fi</label>
                 </div>
 
                 <div class="column column-center">
-                    <p>Тип жилья:</p>                     
+                    <p>Тип жилья:</p>
                     <input type="checkbox" name="accommodation" id="hotel" value="hotel" checked>
-                    <label for="hotel">Гостиница</label>                               
+                    <label for="hotel">Гостиница</label>
                     <input type="checkbox" name="accommodation" id="motel" value="motel" checked>
-                    <label for="motel">Мотель</label>                
+                    <label for="motel">Мотель</label>
                     <input type="checkbox" name="accommodation" id="apartment" value="apartment" checked>
                     <label for="apartment">Апартаменты</label>
                 </div>
@@ -47,37 +47,38 @@
                 <div class="column column-right">
                     <p>Стоимость в сутки (Р):</p>
                     <div class="price-from-to">
-                        <label class="price-from">от                     
+                        <label class="price-from">от
                         <input type="text" name="price_from" value="0"></label>
-                        <label class="price-to">до                   
+                        <label class="price-to">до
                         <input type="text" name="price_to" value="3000"></label>
-                    </div>   
+                    </div>
                     <div class="range-controls">
                         <div class="scale">
                             <div class="bar"></div>
                         </div>
                         <div class="toddler toddler-min"></div>
                         <div class="toddler toddler-max"></div>
-                    </div>                            
+                    </div>
                     <button type="submit" name="show">Показать</button>
                 </div>
-            </form>                      
-                
+            </form>
 
-            <article class="hotels">
+
+            <section class="hotels">
                 <section class="results">
                     <span class="found">Найдено: 3</span>
-                    <span class="separation">Сортировка:</span>                
+                    <span class="separation">Сортировка:</span>
                     <ul>
                         <li><a class="separation-active" href="#">По цене</a></li>
                         <li><a href="#">По типу</a></li>
                         <li><a href="#">По рейтингу</a></li>
                     </ul>
                     <a class="button-up-down down" href="#"></a>
-                    <a class="button-up-down up" href="#"></a> 
+                    <a class="button-up-down up" href="#"></a>
                 </section>
 
-                <section class="section-hotels">
+                <!--
+                <article class="hotels-item">
                     <img src="img/hotels-img1.jpg" width="135" height="90" alt="Amara Resort &amp; Spa">
                     <div class="catalog-item">
                         <h3><a href="#">Amara Resort &amp; Spa</a></h3>
@@ -87,13 +88,13 @@
                         </div>
                         <div class="catalog-item-buttons-and-rating">
                             <a href="#" class="btn-about">подробнее</a>
-                            <a href="#" class="btn-reserve">забронировать</a> 
-                            <span class="rating rating-4star">Рейтинг: 8,5</span> 
-                        </div>                                 
+                            <a href="#" class="btn-reserve">забронировать</a>
+                            <span class="rating rating-4star">Рейтинг: 8,5</span>
+                        </div>
                     </div>
-                </section>
+                </article>
 
-                <section class="section-hotels">
+                <article class="hotels-item">
                     <img src="img/hotels-img2.jpg" width="135" height="90" alt="Desert Quail Inn">
                     <div class="catalog-item">
                         <h3><a href="#">Desert Quail Inn</a></h3>
@@ -105,11 +106,11 @@
                             <a href="#" class="btn-about">подробнее</a>
                             <a href="#" class="btn-reserve">забронировать</a>
                             <span class="rating rating-2star">Рейтинг: 8,9</span>
-                        </div>                             
+                        </div>
                     </div>
-                </section>
+                </article>
 
-                <section class="section-hotels">
+                <article class="hotels-item">
                     <img src="img/hotels-img3.jpg" width="135" height="90" alt="Villas At Poco Diablo">
                     <div class="catalog-item">
                         <h3><a href="#">Villas At Poco Diablo</a></h3>
@@ -121,26 +122,49 @@
                             <a href="#" class="btn-about">подробнее</a>
                             <a href="#" class="btn-reserve">забронировать</a>
                             <span class="rating rating-3star">Рейтинг: 9,2</span>
-                        </div>                       
+                        </div>
                     </div>
-                </section>                   
-            </article>                                            	
+                </article>            -->
+            </section>
         </main>
 
 
-        <footer class="footer-page">
-            <div class="container">
-                <section class="footer-tag">#Visitsedona</section>
-                <section class="footer-social">
-                    <a class="social-btn social-btn-tw" href="https://twitter.com/htmlacademy_ru"></a>
-                    <a class="social-btn social-btn-fb" href="https://www.facebook.com/htmlacademy"></a>
-                    <a class="social-btn social-btn-ytb" href="https://www.youtube.com/user/htmlacademyru"></a>                   
-                </section>
-                <section class="footer-copyright">
-                    <span>Website by <a class="footer-copyright-author" href="https://htmlacademy.ru/profile/svistunov">A.Svistunov</a></span><br>
-                    <span>Design by</span> <a class="footer-html-academy" href="https://htmlacademy.ru"></a>                    
-                </section>
-            </div>            
+        <footer class="footer">
+          <div class="container">
+            <div class="footer-page">
+              <section class="footer-tag">#Visitsedona</section>
+              <section class="footer-social">
+                <a class="social-btn social-btn-tw" href="https://twitter.com/htmlacademy_ru"></a>
+                <a class="social-btn social-btn-fb" href="https://www.facebook.com/htmlacademy"></a>
+                <a class="social-btn social-btn-ytb" href="https://www.youtube.com/user/htmlacademyru"></a>
+              </section>
+              <section class="footer-copyright">
+                <span class="footer-copyright-author">Website by <a class="footer-copyright-author-link" href="https://htmlacademy.ru/profile/svistunov" title="author">A.Svistunov</a></span>
+                <span class="footer-copyright-design">Design by <a class="footer-html-academy" href="https://htmlacademy.ru"></a></span>
+              </section>
+            </div>
+          </div>
         </footer>
+
+        <teplate id="hotel-template" class="template">
+          <article class="hotels-item">
+            <img src="img/hotels-img1.jpg" width="135" height="90" alt="Amara Resort &amp; Spa">
+            <div class="catalog-item">
+              <h3><a href="#" class="hotel-name"></a></h3>
+              <div class="catalog-item-type-price">
+                <span class="hotel-type"></span>
+                <span class="hotel-price"></span>
+              </div>
+              <div class="catalog-item-buttons-and-rating">
+                <a href="#" class="btn-about">подробнее</a>
+                <a href="#" class="btn-reserve">забронировать</a>
+                <span class="hotel-rating"></span>
+              </div>
+            </div>
+          </article>
+        </teplate>
+
+        <script src="data/hotels.js" type="text/javascript"></script>
+        <script src="js/hotel-list.js" type="text/javascript"></script>
     </body>
 </html>

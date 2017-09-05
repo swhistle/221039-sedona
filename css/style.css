@@ -35,6 +35,9 @@ main {
     flex-grow: 3;
     background-color: #f2f2f2;
 }
+#hotel-template {
+  display: none;
+}
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -52,6 +55,13 @@ main {
     margin: 0 auto;
     padding: 0;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+.page-header.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 200;
 }
 .header-main-menu {
     min-height: 56px;
@@ -106,7 +116,7 @@ main {
     left: calc(50% - 69px);
     border: none;
     outline: none;
-    z-index: 100;
+    z-index: 210;
 }
 .header-logo:hover {
     transform: scale(1.1);
@@ -164,7 +174,7 @@ header li.active a:active {
     padding-top: 40px;
     box-sizing: border-box;
 }
-.footer-index {} .footer-page .container {
+.footer-page .container {
     box-shadow: none;
 }
 footer .footer-page {
@@ -321,6 +331,10 @@ footer .footer-page {
 }
 /*СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ*/
 
+.main-index {
+    margin-top: 55px;
+}
+
 .main-background {
     display: block;
     width: 100%;
@@ -389,13 +403,16 @@ footer .footer-page {
     height: 256px;
     overflow: hidden;
     flex-grow: 2;
+    background-color: #000;
 }
 .index-image img {
     width: auto;
     height: 100%;
+    transition: 1s ease;
 }
-.index-image:hover {
-    opacity: 0.8;
+.index-image:hover img {
+    opacity: 0.7;
+    transform: scale(1.1);
 }
 .reasons {
     padding: 0 30px;
@@ -1032,19 +1049,19 @@ input[type="checkbox"]:checked + label {
     background-position: -538px -10px;
     opacity: 1;
 }
-.section-hotels {
+.hotels-item {
     width: 100%;
     height: 150px;
     border-bottom: 1px solid #e5e5e5;
     background: #ffffff;
 }
-.section-hotels img {
+.hotels-item img {
     float: left;
     margin: 29px 0;
     margin-left: 72px;
 }
 
-.section-hotels img:hover {
+.hotels-item img:hover {
     opacity: 0.8;
 }
 .catalog-item {
@@ -1141,35 +1158,37 @@ input[type="checkbox"]:checked + label {
     background: #503e33;
     color: #857871;
 }
-.catalog-item .rating {
+.catalog-item .hotel-rating {
+    display: inline-block;
+    float: right;
     margin-right: 0px;
     padding-left: 15px;
     padding-top: 3px;
     position: relative;
-    float: right;
     box-sizing: border-box;
     width: 110px;
     height: 26px;
     background: #f2f2f2;
     color: #666666;
 }
-.catalog-item .rating::before {
+.catalog-item .hotel-rating::before {
     content: "";
     display: block;
     position: absolute;
-    top: -63px;
+    top: -40px;
     right: -3px;
-    width: 86px;
     height: 25px;
     background: url("../img/hotels-star.png") repeat-x;
 }
-.catalog-item .rating-2star::before {
-    width: 42px;
+.catalog-item .hotel-rating-star-4::before {
+  width: 86px;
 }
-.catalog-item .rating-3star::before {
-    width: 64px;
+.catalog-item .hotel-rating-star-3::before {
+  width: 64px;
 }
-
+.catalog-item .hotel-rating-star-2::before {
+  width: 42px;
+}
 /*СТИЛИ ДЛЯ ВНУТРЕННЕЙ СТРАНИЦЫ (КАРТА ШТАТА)*/
 
 .main-map {
