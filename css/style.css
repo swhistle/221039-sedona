@@ -1055,13 +1055,37 @@ input[type="checkbox"]:checked + label {
     border-bottom: 1px solid #e5e5e5;
     background: #ffffff;
 }
-.hotels-item img {
+.hotel-image-container {
     float: left;
     margin: 29px 0;
     margin-left: 72px;
+    width: 135px;
+    height: 90px;
+    font-size: 0;
 }
-
-.hotels-item img:hover {
+.hotel-image-container span {
+  display: none;
+}
+.hotel-image-container.hotel-nophoto img {
+  display: none;
+  width: 0;
+  height: 0;
+  border: none;
+  outline: none;
+  opacity: 0;
+}
+.hotel-nophoto {
+  background-color: #d2dbe0;
+  text-align: center;
+}
+.hotel-nophoto span {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 33px;
+}
+.hotel-image-container img:hover {
     opacity: 0.8;
 }
 .catalog-item {
